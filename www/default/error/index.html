@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><!--# echo var="status" --> <!--# echo var="status_text" --> - <!--# echo var="status_host" --></title>
+    <style>
+        body {
+            margin: 0 auto;
+            text-align: center;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+            color: white;
+            background: black;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1><!--# echo var="status" --> <!--# echo var="status_text" --></h1>
+    <h2><!--# echo var="status_description" --></h2>
+</div>
+<hr><div><!--# echo var="status_host" --></div>
+</body>
+</html>
