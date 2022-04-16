@@ -4,8 +4,13 @@ services:
     container_name: nginx
     image: nginx:1.20.2
     volumes:
-      - /etc/nginx/nginx.conf:/etc/nginx/nginx.conf
-      - /etc/nginx/conf.d:/etc/nginx/conf.d
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/conf.d/default.conf:/nginx/conf.d/default.conf
+      - ./www/default/error.html:/usr/share/nginx/html/error.html:ro
+      - ./www/default/network.html:/usr/share/nginx/html/network.html:ro
+      - ./www/nginx/index.html:/usr/share/nginx/html/index.html:ro
+      - ./www/nginx/security.txt:/usr/share/nginx/html/secuity.txt:ro
+      - ./www/nginx/robots.txt:/usr/share/nginx/html/robots.txt:ro
     network_mode: host
     restart: unless-stopped
     logging: 
