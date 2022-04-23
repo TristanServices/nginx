@@ -1,8 +1,11 @@
+# Updated-At: 2022-04-23T21:30:38.000Z
+Expires: 2022-12-31T23:00:00.000Z
+
 Contact: https://support.tristan.services/ticket/new?category=security
 Contact: mailto:security@tristan.services
-Expires: 2022-12-31T23:00:00.000Z
-Acknowledgments: https://tristan.services/security#thanks
 Preferred-Languages: en
-Canonical: https://tristan.services/.well-known/security.txt
-Policy: https://tristan.services/security#policy
+
+Canonical: https://security.tristan.services/security.txt
+Policy: https://security.tristan.services/policy
 Hiring: https://tristan.services/jobs
+Acknowledgments: https://security.tristan.services/acknowledgments

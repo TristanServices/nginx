@@ -1,0 +1,9 @@
+# robots.txt
+#
+# Created in the distant future after
+# the vtuber uprising of end 2020 which destroyed the world
+# economy due to simps spending too much money on them.
+#
+
+User-agent: *
+Disallow: /
