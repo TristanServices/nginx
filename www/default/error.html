@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><!--# echo var="status" --> <!--# echo var="status_text" --> - <!--# echo var="status_host" --></title>
+    <title><!--# echo var="status" default="Error" --> - <!--# echo var="status_host" default="Error" --></title>
     <style>
         body {
             margin: 0 auto;
@@ -16,9 +16,9 @@
 </head>
 <body>
 <div>
-    <h1><!--# echo var="status" --> <!--# echo var="status_text" --></h1>
-    <h2><!--# echo var="status_description" --></h2>
+    <h1><!--# echo var="status" default="Error" --> - <!--# echo var="status_text" default="Error" -->. That's an error.</h1>
+    <h2><!--# echo var="status_description" default="It's an error" -->. That's all we know.</h2>
 </div>
-<hr><div><!--# echo var="status_host" --></div>
+<hr><div><!--# echo var="status_host" default="" --></div>
 </body>
 </html>
