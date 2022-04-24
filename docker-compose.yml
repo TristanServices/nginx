@@ -18,8 +18,9 @@ services:
       options:
         max-size: 50m
     #deploy:
+      #mode: replicated
       #replicas: 3
-      #resources:
-        #limits:
-          #cpus: '4.00' # 1 = core
-          #memory: 5G # 1 1G = 1GB ram
+      resources:
+        limits:
+          cpus: '3.00' # 1 = core
+          memory: 5G # 1 1G = 1GB ram
