@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><!--# echo var="status" default="Error" --> - <!--# echo var="status_host" default="Error" --></title>
+    <title><!--# echo var="status" default="Error" --> - <!--# echo var="host" default="" --></title>
     <style>
         body {
             margin: 0 auto;
@@ -12,13 +12,19 @@
             color: white;
             background: black;
         }
+        ins {
+            margin: 0 auto;
+            padding: 0 auto;
+            color: #777;
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
 <div>
-    <h1><!--# echo var="status" default="Error" --> - <!--# echo var="status_text" default="Error" -->. That's an error.</h1>
-    <h2><!--# echo var="status_description" default="It's an error" -->. That's all we know.</h2>
+    <h1><!--# echo var="status" default="Error" --> - <!--# echo var="status_text" default="Error" -->. <ins>That's an error.</ins></h1>
+    <h2><!--# echo var="status_description" default="It's an error" -->. <ins>That's all we know.</ins></h2>
 </div>
-<hr><div><!--# echo var="status_host" default="" --></div>
+<hr><div><!--# echo var="host" default="" --></div>
 </body>
 </html>
