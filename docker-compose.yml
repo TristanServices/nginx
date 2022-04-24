@@ -17,7 +17,7 @@ services:
       driver: json-file
       options:
         max-size: 50m
-    #deploy:
+    deploy:
       #mode: replicated
       #replicas: 3
       resources:
