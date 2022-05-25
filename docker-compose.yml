@@ -3,16 +3,21 @@ services:
   nginx:
     container_name: nginx
     image: nginx:1.20.2
+    network_mode: host
+    restart: unless-stopped
+    cap_drop:
+      - "ALL"
+    read_only: true
     volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
       - ./www/default/error.html:/usr/share/nginx/html/error.html:ro
       - ./www/default/network.html:/usr/share/nginx/html/network.html:ro
       - ./www/nginx/index.html:/usr/share/nginx/html/index.html:ro
       - ./www/nginx/security.txt:/usr/share/nginx/html/secuity.txt:ro
       - ./www/nginx/robots.txt:/usr/share/nginx/html/robots.txt:ro
-    network_mode: host
-    restart: unless-stopped
+    tmpfs:
+      - "/tmp:exec,uid=999,gid=999"
     logging: 
       driver: json-file
       options:
