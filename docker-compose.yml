@@ -7,7 +7,7 @@ services:
     cap_drop:
       - "ALL"
     cap_add:
-      #- "CAP_CHOWN"
+      - "CAP_CHOWN"
       #- "CAP_DAC_OVERRIDE"
       - "CAP_SETGID"
       - "CAP_SETUID"
