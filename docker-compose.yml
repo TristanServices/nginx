@@ -31,8 +31,6 @@ services:
       options:
         max-size: 50m
     deploy:
-      #mode: replicated
-      #replicas: 3
       resources:
         limits:
           cpus: '3.00' # 1 = core
