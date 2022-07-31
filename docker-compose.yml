@@ -15,7 +15,8 @@ services:
     read_only: true
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf:rw
+      - ./nginx/config:/etc/nginx/conf.d:ro
+      - ./nginx/config/default.conf:/etc/nginx/conf.d/default.conf:rw
       - ./www/default/error.html:/usr/share/nginx/html/error.html:ro
       - ./www/default/network.html:/usr/share/nginx/html/network.html:ro
       - ./www/nginx/index.html:/usr/share/nginx/html/index.html:ro
